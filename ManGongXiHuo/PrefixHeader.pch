@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  ManGongXiHuo
+//
+//  Created by teacher on 16-10-18.
+//  Copyright (c) 2016年 teacher. All rights reserved.
+//
+
+#ifndef ManGongXiHuo_PrefixHeader_pch
+#define ManGongXiHuo_PrefixHeader_pch
+
+#define MAINCOLOR [UIColor colorWithRed:52/255.0 green:119/255.0 blue:77/255.0 alpha:1]
+#define BGCOLOR [UIColor colorWithRed:241/255.0 green:241/255.0 blue:231/255.0 alpha:1]
+#define  SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define  SCREEN_H [UIScreen mainScreen].bounds.size.height
+#define RGB(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+
+#endif

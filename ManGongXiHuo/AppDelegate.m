@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "StartPageViewController.h"
+#import "TarBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,27 @@
             
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *first = [user objectForKey:@"first"];
+    
+    if(![first isEqualToString:@"YES"])
+    {
+        
+        NSLog(@"第一次启动程序");
+        [user setObject:@"YES" forKey:@"first"];
+        
+        StartPageViewController *startCtl = [[StartPageViewController alloc] init];
+        self.window.rootViewController = startCtl;
+    }
+    else
+    {
+        TarBarViewController *tabBarCtl = [[TarBarViewController alloc] init];
+        self.window.rootViewController = tabBarCtl;
+        
+    }
+
+
     return YES;
 }
 
